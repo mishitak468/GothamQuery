@@ -171,11 +171,3 @@ python-dotenv
 
 **Why execution accuracy over string matching?** Two queries can produce identical results through different SQL paths. String comparison would penalize valid alternatives — execution accuracy measures what actually matters.
 
----
-
-## Stats
-
-- Achieved **86.7% SQL execution accuracy** on a 15-case hand-written golden dataset spanning GROUP BY, window functions, CTEs, self-JOINs, subqueries, date math, and NULL handling
-- Reduced query construction time from ~20 min (manual analyst) to **~1.2s** (automated) on the same question set
-- Evaluated against **15 query patterns** including RANK(), running SUM(), correlated subqueries, and EXTRACT(DOW)
-- Engineered schema-aware prompts with exact column names, enum values, and DuckDB-specific syntax rules to prevent column hallucination
